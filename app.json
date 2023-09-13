@@ -1,14 +1,45 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/user/index",
+    "pages/product/index",
     "pages/logs/logs"
+
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "农产品采摘管理系统",
     "navigationBarTextStyle":"black"
   },
+  "tabBar": { 
+    "lazyCodeLoading": "requiredComponents",
+    "color": "#ccc", 
+    "selectedColor": "#35495e", 
+    "borderStyle": "white", 
+    "backgroundColor": "#f9f9f9", 
+    "list": [ 
+     { 
+      "text": "首页", 
+      "pagePath": "pages/index/index",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index_s.png"
+     }, 
+     { 
+      "text": "收获情况", 
+      "pagePath": "pages/product/index",
+      "iconPath": "images/product.png",
+      "selectedIconPath": "images/product_s.png"
+     }, 
+     { 
+      "text": "我的", 
+      "pagePath": "pages/user/index",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/user_s.png"
+     } 
+    ] 
+   } ,
   "style": "v2",
   "sitemapLocation": "sitemap.json"
+  
 }
