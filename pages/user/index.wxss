@@ -3,21 +3,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10rpx;
-  color: rgb(117, 117, 117);
+  color: rgb(255, 255, 255);
 }
 
 .userinfo-avatar {
   overflow: hidden;
   width: 128rpx;
   height: 128rpx;
+  margin-top: 80rpx;
   border-radius: 50%;
 }
 
 .usermotto {
-  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin-top: 80rpx;
 }
 
 .userinfo_img{
-  margin-top: 10px;
+  background-color: rgb(128, 155, 83);
+ 
+}
+
+.top_background{
+  width: 1000rpx;
+  height: 600rpx;
+  background-color: darkgreen;
 }
