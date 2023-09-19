@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <view class="userinfo" style="width: 162rpx; height: 209rpx; display: flex; box-sizing: border-box; position: relative; left: -250rpx; top: -200rpx">
     <block wx:if="{{canIUseOpenData}}">
       <view class="userinfo-avatar" bindtap="bindViewTap">
         <open-data type="userAvatarUrl"></open-data>
@@ -13,11 +13,22 @@
       <view wx:else> 请使用1.4.4及以上版本基础库 </view>
     </block>
     <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <image bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+    
   </view>
+<view style="width: 100rpx; height: 100rpx; display: flex; box-sizing: border-box; position: relative; left: 250rpx; top: -360rpx">
+<block>
+  <van-button class="buttons">
+    <van-icon name="location-o" size="2rem"/>
+  </van-button>
+</block>
+</view>
   <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+    <text class="user-motto" style="position: relative; left: 0rpx; top: -538rpx">{{motto}}
+    
+    </text>
   </view>
+
 </view>

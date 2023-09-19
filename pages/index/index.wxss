@@ -11,9 +11,13 @@
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
-  border-radius: 50%;
+  border-radius: 0%;
 }
 
 .usermotto {
   margin-top: 200px;
+}
+
+.buttons{
+  
 }

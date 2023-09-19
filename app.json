@@ -1,4 +1,5 @@
 {
+ 
   "pages":[
     "pages/index/index",
     "pages/user/index",
@@ -39,7 +40,8 @@
      } 
     ] 
    } ,
-  "style": "v2",
+   "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
   "sitemapLocation": "sitemap.json"
-  
 }
