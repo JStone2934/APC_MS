@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>农产品数据采集系统 - 我的</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #bottom-nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #bottom-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #bottom-nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        #login-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主页面 -->
+    <div id="main-content">
+        <h1>我的</h1>
+        <div id="login-button">
+            <button onclick="getUserInfo()">用户登录</button>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div id="bottom-nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="收货情况.html">收获情况</a></li>
+            <li><a href="我的.html">我的</a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript代码 -->
+    <script>
+        function getUserInfo() {
+            // 在这里编写获取用户微信信息的代码
+            // 可以使用微信登录SDK或其他方式来实现
+            // 一旦获取用户信息，跳转到用户信息维护页面
+            window.location.href = "用户信息维护.html";
+        }
+    </script>
+</body>
+</html>

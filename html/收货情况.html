@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>农产品数据采集系统 - 收获情况</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #bottom-nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #bottom-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #bottom-nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .table {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            width: 45%;
+        }
+
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .table input[type="text"], .table textarea {
+            width: 100%;
+            border: none;
+        }
+
+        #toggle-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主页面 -->
+    <div id="main-content">
+        <div class="table-container">
+            <!-- 同村镇信息表格 -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>农产品</th>
+                        <th>收获情况</th>
+                        <th>生长情况</th>
+                        <th>收获计划</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <!-- 添加10行可编辑的行 -->
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <!-- ... 添加更多行 ... -->
+                </tbody>
+            </table>
+            
+            <!-- 个人生产情况表格 -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>农产品</th>
+                        <th>生长情况</th>
+                        <th>产量</th>
+                        <th>收获计划</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <!-- 添加10行可编辑的行 -->
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <!-- ... 添加更多行 ... -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 修改公开状态按钮 -->
+        <button id="toggle-button" onclick="togglePublicStatus()">修改公开状态</button>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div id="bottom-nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="收货情况.html">收获情况</a></li>
+            <li><a href="我的.html">我的</a></li>
+        </ul>
+    </div>
+
+    <!-- JavaScript代码 -->
+    <script>
+        function togglePublicStatus() {
+            // 在这里编写修改公开状态的代码
+        }
+    </script>
+</body>
+</html>
+

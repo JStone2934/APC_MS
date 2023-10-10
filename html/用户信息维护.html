@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息维护</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户信息维护</h1>
+    <form id="user-info-form">
+        <label for="user-name">用户名称:</label>
+        <input type="text" id="user-name" name="user-name"><br>
+
+        <label for="contact">联系方式:</label>
+        <input type="text" id="contact" name="contact"><br>
+
+        <label for="address">地址:</label>
+        <input type="text" id="address" name="address"><br>
+
+        <label for="location">归属地:</label>
+        <input type="text" id="location" name="location"><br>
+
+        <label for="products">农产品:</label>
+        <input type="text" id="products" name="products"><br>
+
+        <input type="button" value="保存" onclick="saveUserInfo()">
+    </form>
+
+    <script>
+        function saveUserInfo() {
+            // 获取用户填写的信息
+            var userName = document.getElementById("user-name").value;
+            var contact = document.getElementById("contact").value;
+            var address = document.getElementById("address").value;
+            var location = document.getElementById("location").value;
+            var products = document.getElementById("products").value;
+
+            // 将用户信息保存到本地存储
+            var userInfo = {
+                userName: userName,
+                contact: contact,
+                address: address,
+                location: location,
+                products: products
+            };
+
+            localStorage.setItem("userInfo", JSON.stringify(userInfo));
+
+            // 提示用户信息已保存
+            alert("用户信息已保存");
+        }
+
+        // 检查本地存储是否存在用户信息，如果存在，则填充文本框
+        var storedUserInfo = localStorage.getItem("userInfo");
+        if (storedUserInfo) {
+            var userInfo = JSON.parse(storedUserInfo);
+            document.getElementById("user-name").value = userInfo.userName;
+            document.getElementById("contact").value = userInfo.contact;
+            document.getElementById("address").value = userInfo.address;
+            document.getElementById("location").value = userInfo.location;
+            document.getElementById("products").value = userInfo.products;
+        }
+    </script>
+</body>
+</html>

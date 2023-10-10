@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>农产品数据采集系统 - 首页</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #bottom-nav {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        #bottom-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #bottom-nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        #form-container {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主页面 -->
+    <div id="main-content">
+        <h1>农产品信息更新</h1>
+        <div id="form-container">
+            <form>
+                <label for="product-type">农产品类型选择:</label>
+                <input type="text" id="product-type" name="product-type"><br>
+
+                <label for="harvest">收获:</label>
+                <input type="text" id="harvest" name="harvest"><br>
+
+                <label for="growth-status">生长状态更新:</label>
+                <input type="text" id="growth-status" name="growth-status"><br>
+
+                <label for="production-plan">新的生产计划:</label>
+                <input type="text" id="production-plan" name="production-plan"><br>
+
+                <input type="submit" value="提交">
+            </form>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div id="bottom-nav">
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="收货情况.html">收货情况</a></li>
+            <li><a href="我的.html">我的</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
