@@ -16,10 +16,13 @@
         }
 
         #bottom-nav {
+            font-weight: bold; /* 设置文本为粗体 */
+            font-family: "Arial", sans-serif; /* 设置字体为白体 */
             text-align: center;
-            padding: 20px 0;
+            font-size: 20px;
+            padding: 30px 0;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
         }
-
         #bottom-nav ul {
             list-style-type: none;
             padding: 0;
@@ -33,6 +36,14 @@
         #login-button {
             margin-top: 20px;
         }
+        body {
+            background-image: url('background.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +52,19 @@
         <h1>我的</h1>
         <div id="login-button">
             <button onclick="getUserInfo()">用户登录</button>
+        </div>
+        <br><br>
+        <div>
+            <label>用户姓名</label><br><br>
+            <label>联系方式</label><br><br>
+            <label>归宿地</label><br><br>
+            <label>农产品</label>
+            <ul>
+                <li>产品1</li>
+                <li>产品2</li>
+                <li>产品3</li>
+                <!-- 添加更多列表项 -->
+            </ul>
         </div>
     </div>
 

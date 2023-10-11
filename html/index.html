@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>农产品数据采集系统 - 首页</title>
     <style>
+ 
         body {
             display: flex;
             flex-direction: column;
@@ -16,8 +17,12 @@
         }
 
         #bottom-nav {
+            font-weight: bold; /* 设置文本为粗体 */
+            font-family: "Arial", sans-serif; /* 设置字体为白体 */
             text-align: center;
-            padding: 20px 0;
+            font-size: 20px;
+            padding: 30px 0;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
         }
 
         #bottom-nav ul {
@@ -34,30 +39,48 @@
             text-align: center;
             padding: 20px;
         }
+        body {
+            background-image: url('background.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <!-- 主页面 -->
+<!-- 主页面 -->
     <div id="main-content">
         <h1>农产品信息更新</h1>
         <div id="form-container">
-            <form>
+            <form style="margin-bottom: 10px;">
                 <label for="product-type">农产品类型选择:</label>
-                <input type="text" id="product-type" name="product-type"><br>
+                <select id="product-type" name="product-type">
+                    <option value="type1">类型1</option>
+                    <option value="type2">类型2</option>
+                    <option value="type3">类型3</option>
+                </select><br><br>
 
                 <label for="harvest">收获:</label>
-                <input type="text" id="harvest" name="harvest"><br>
+                <input type="text" id="harvest" name="harvest"><br><br>
 
                 <label for="growth-status">生长状态更新:</label>
-                <input type="text" id="growth-status" name="growth-status"><br>
+                <input type="text" id="growth-status" name="growth-status"><br><br>
 
                 <label for="production-plan">新的生产计划:</label>
-                <input type="text" id="production-plan" name="production-plan"><br>
+                <input type="text" id="production-plan" name="production-plan"><br><br>
+                
 
+                <input type="submit" value="拍摄照片">
+                <br><br>
                 <input type="submit" value="提交">
             </form>
         </div>
     </div>
+
+
+
 
     <!-- 底部导航栏 -->
     <div id="bottom-nav">

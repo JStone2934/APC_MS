@@ -18,8 +18,12 @@
         }
 
         #bottom-nav {
+            font-weight: bold; /* 设置文本为粗体 */
+            font-family: "Arial", sans-serif; /* 设置字体为白体 */
             text-align: center;
-            padding: 20px 0;
+            font-size: 20px;
+            padding: 30px 0;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
         }
 
         #bottom-nav ul {
@@ -41,7 +45,9 @@
         .table {
             border: 1px solid #000;
             border-collapse: collapse;
-            width: 45%;
+            width:100%;
+            height: 20px;
+            font-size: 12px;
         }
 
         .table th, .table td {
@@ -58,85 +64,92 @@
         #toggle-button {
             margin-top: 20px;
         }
+        body {
+            background-image: url('background.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100vh;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
+    <h1 style="text-align: center;">农产品情况概览</h1>
     <!-- 主页面 -->
     <div id="main-content">
         <div class="table-container">
             <!-- 同村镇信息表格 -->
             <table class="table">
-                <thead>
-                    <tr>
-                        <th>农产品</th>
-                        <th>收获情况</th>
-                        <th>生长情况</th>
-                        <th>收获计划</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <!-- 添加10行可编辑的行 -->
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <!-- ... 添加更多行 ... -->
-                </tbody>
+                <tr style="border-bottom: 10px;">
+                    <td>用户</td>
+                    <td>农产品</td>
+                    <td>收获情况</td>
+                    <td>生长情况</td>
+                    <td>收获计划</td>
+                </tr>
+                <tr>
+                    <td>用户1</td>
+                    <td>产品1</td>
+                    <td>情况1</td>
+                    <td>生长1</td>
+                    <td>计划1</td>
+                    <td><button>操作</button></td>
+                </tr>
+                <tr>
+                    <td>用户2</td>
+                    <td>产品2</td>
+                    <td>情况2</td>
+                    <td>生长2</td>
+                    <td>计划2</td>
+                    <td><button>操作</button></td>
+                </tr>
+                <tr>
+                    <td>用户3</td>
+                    <td>产品3</td>
+                    <td>情况3</td>
+                    <td>生长3</td>
+                    <td>计划3</td>
+                    <td><button>操作</button></td>
+                </tr>
+                <tr>
+                    <td>用户3</td>
+                    <td>产品4</td>
+                    <td>情况4</td>
+                    <td>生长4</td>
+                    <td>计划4</td>
+                    <td><button>操作</button></td>
+                </tr>
+                <tr>
+                    <td>用户3</td>
+                    <td>产品4</td>
+                    <td>情况4</td>
+                    <td>生长4</td>
+                    <td>计划4</td>
+                    <td><button>操作</button></td>
+                </tr>
+                <!-- 添加更多行 -->
             </table>
             
             <!-- 个人生产情况表格 -->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>农产品</th>
-                        <th>生长情况</th>
-                        <th>产量</th>
-                        <th>收获计划</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <!-- 添加10行可编辑的行 -->
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <!-- ... 添加更多行 ... -->
-                </tbody>
-            </table>
+            
         </div>
 
         <!-- 修改公开状态按钮 -->
-        <button id="toggle-button" onclick="togglePublicStatus()">修改公开状态</button>
+        
     </div>
-
+    <table>
+        <tr>
+            <td style="text-align: center;">
+                <label >排序方式：</label>
+                <select id="product-type" name="product-type">
+                    <option value="type1">姓名</option>
+                    <option value="type2">农产品</option>
+                    <option value="type3">时间</option>
+                </select>
+            </td>
+        </tr>
+    </table>
     <!-- 底部导航栏 -->
     <div id="bottom-nav">
         <ul>
