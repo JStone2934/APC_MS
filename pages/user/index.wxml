@@ -17,7 +17,31 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+<view class="pop_page">
+  <van-cell-group inset>
+    <van-cell title="归属地" value="内容" icon="location-o"/>
+    <van-cell title="联系方式" value="内容" icon="phone-o" />
+  <van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="我的农产品" name="1">
+    <van-cell title="橙子" value="内容" />
+    <van-cell title="荔枝" value="内容" />
+    <van-cell title="龙眼" value="内容" />
+    <van-cell title="葡萄" value="内容" />
+  </van-collapse-item>
+
+</van-collapse>
+  </van-cell-group>
+    <van-cell title="修改信息" is-link bind:click="showPopup" />
+    <van-popup show="{{ show }}" bind:close="onClose">内容</van-popup>
+</view>
+<view>
+  
+</view>
+
+
+

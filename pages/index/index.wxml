@@ -20,15 +20,13 @@
   </view>
 <view style="width: 100rpx; height: 100rpx; display: flex; box-sizing: border-box; position: relative; left: 250rpx; top: -360rpx">
 <block>
-  <van-button class="buttons">
-    <van-icon name="location-o" size="2rem"/>
+  <van-button class="buttons" icon="location-o" type="round">
   </van-button>
+  <van-dropdown-menu>
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
 </block>
 </view>
-  <view class="usermotto">
-    <text class="user-motto" style="position: relative; left: 0rpx; top: -538rpx">{{motto}}
-    
-    </text>
-  </view>
-
+  <h1>用户信息维护</h1>
 </view>

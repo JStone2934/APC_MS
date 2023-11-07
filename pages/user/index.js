@@ -4,12 +4,18 @@ const app = getApp()
 
 Page({
   data: {
+    activeNames: ['1'],
     motto: '我的个人信息',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+  },
+  onChange(event) {
+    this.setData({
+      activeNames: event.detail,
+    });
   },
   // 事件处理函数
   bindViewTap() {
